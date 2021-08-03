@@ -35,12 +35,10 @@
         <label for="exampleInputPassword1" style="margin-right: 130px;">Message</label>
         <input type="text" class="message form-control" id="exampleInputPassword1" style="width: 200px; margin: 0 auto;" placeholder="Enter the message">
       </div>
-    <!-- <label for="name">Enter your name</label>
-    <input type="text" class="name"><br><br>
-    <input type="text" class="message"> -->
+    
     <br><button onclick="sendMessage()" class="buttonlala btn btn-primary">Send message</button>
 </div>
-    <!-- <h1></h1> -->
+    
     <script>
         const socket=io('http://localhost:3001');
         socket.on("connection");
@@ -53,7 +51,7 @@
         })
         socket.on('message',(data)=>{
             const elem=document.createElement('p');
-            // elem.innerHTML="<h4>Message sent by: </h4>"+document.querySelector('.name').value +data;
+            
             elem.innerHTML="Message:"+data;
             elem.className="lolni"
             document.body.appendChild(elem);
